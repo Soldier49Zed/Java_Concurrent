@@ -9,6 +9,8 @@ public class VolatileFeaturesExample {
 
     volatile long v1 = 0L;              //使用volatile声明64位的long型变量
 
+    // long v1 = 0L;
+
     public void set(Long l) {
         v1 = l;                         //单个volatile变量的写
     }
