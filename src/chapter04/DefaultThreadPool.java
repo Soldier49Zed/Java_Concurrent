@@ -43,7 +43,7 @@ public class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job> 
         if (job != null) {
             //添加一个工作，然后进行通知
             synchronized (jobs) {
-                jobs.add(job);
+                jobs.addLast(job);
                 jobs.notify();
             }
         }
