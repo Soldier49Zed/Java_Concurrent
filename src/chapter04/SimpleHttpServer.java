@@ -84,7 +84,7 @@ public class SimpleHttpServer {
                     out.println("Server: Molly");
                     out.println("Content-Type: text/html; charset = UTF-8");
                     out.println("");
-                    while ((line = br.readLine()) != null){
+                    while ((line = br.readLine()) != null) {
                         out.println(line);
                     }
                 }
@@ -93,14 +93,14 @@ public class SimpleHttpServer {
                 out.println("HTTP/1.1 500");
                 out.println();
                 out.flush();
-            }finally {
-                close(br,in,reader,out,socket);
+            } finally {
+                close(br, in, reader, out, socket);
             }
         }
 
         private void close(Closeable... closeables) {
-            if (closeables != null){
-                for (Closeable closeable : closeables){
+            if (closeables != null) {
+                for (Closeable closeable : closeables) {
                     try {
                         closeable.close();
                     } catch (IOException e) {
